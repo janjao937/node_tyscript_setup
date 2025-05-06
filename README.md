@@ -1,100 +1,45 @@
-# 🚀 Node.js & TypeScript Project Setup
+# TypeScript Setup Guide
+เอกสารนี้ให้แนวทางการติดตั้งและใช้งาน TypeScript สำหรับโปรเจกต์ Node.js ของคุณ พร้อมแนะนำแพ็กเกจเสริมที่ช่วยให้พัฒนางานได้สะดวกขึ้น
 
-> **Optimize your backend development with TypeScript, Express, and Axios!**
+## การติดตั้ง TypeScript แบบ Global
+npm install --global typescript
 
-## 📌 Features
-- ⚡ TypeScript for strong typing and maintainability
-- 📦 Express for efficient server-side development
-- 🔥 Axios for flexible API communication
-
----
-
-## 🛠 Installation & Setup
-
-### 1️⃣ Install TypeScript Globally
-```bash
+### แนะนำการติดตั้งเพิ่มเติม
 npm install --global typescript ts-node ts-node-dev
-```
-Verify installation:
-```bash
-tsc -v
+- typescript → คอมไพล์ TypeScript เป็น JavaScript
+- ts-node → รันไฟล์ TypeScript โดยตรงโดยไม่ต้องคอมไพล์ก่อน
+- ts-node-dev → รันแบบ auto-restart เมื่อมีการเปลี่ยนแปลงไฟล์ (คล้ายกับ nodemon)
+
+### ตรวจสอบว่าแพ็กเกจถูกติดตั้งแบบ Global
 npm list -g --depth=0
-```
-Install a specific TypeScript version:
-```bash
+
+## การตรวจสอบการติดตั้ง
+tsc -v
+
+## ติดตั้ง TypeScript เวอร์ชันเฉพาะ
 npm install --global typescript@4.x.x
-```
-Uninstall TypeScript:
-```bash
+
+## การถอนการติดตั้ง TypeScript
 npm uninstall --global typescript
-```
-Initialize TypeScript configuration:
-```bash
+
+## การตั้งค่าเริ่มต้นของ TypeScript
 tsc --init
-```
 
----
+## ติดตั้งแพ็กเกจที่เกี่ยวข้องกับ TypeScript
+npm i express 
+npm i @types/express --dev
+npm i axios
+npm i @types/axios --dev
 
-### 2️⃣ Install Dependencies
-```bash
-npm i express @types/express --save-dev
-npm i axios @types/axios --save-dev
-```
-
----
-
-## 📜 Usage & Running the Project
-
-### 3️⃣ Compile & Run TypeScript
-Compile:
-```bash
+## การคอมไพล์ TypeScript
 tsc server.ts
 node server.js
-```
-Run without compiling separately:
-```bash
+
+## คอมไพล์และรันไฟล์ TypeScript พร้อมกัน
 ts-node server.ts
-```
-Run with auto-restart (like nodemon for TypeScript):
-```bash
+
+## รันเซิร์ฟเวอร์แบบ background (คล้ายกับ nodemon)
 ts-node-dev src/server.ts
-```
 
----
-
-## 🏗 Project Structure
-```
-📦 project-root
- ┣ 📂 src
- ┃ ┣ 📜 server.ts
- ┃ ┣ 📜 config.ts
- ┃ ┗ 📂 utils
- ┣ 📂 dist
- ┣ 📜 package.json
- ┣ 📜 tsconfig.json
- ┣ 📜 .gitignore
- ┗ 📜 README.md
-```
-
----
-
-## ⚙️ Environment Configuration
-Set up `.env` file:
-```plaintext
-PORT=3000
-DB_URL=<your-database-url>
-```
-
----
-
-## 🤝 Contributing
-Feel free to submit issues or pull requests to improve the project. Let's build something great together!
-
----
-
-## 📜 License
-This project is licensed under the MIT License.
-
----
-
-💡 **Happy Coding!** 🎉
+## License
+MIT
