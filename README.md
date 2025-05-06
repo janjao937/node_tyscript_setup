@@ -26,10 +26,10 @@ npm uninstall --global typescript
 tsc --init
 
 ## ติดตั้งแพ็กเกจที่เกี่ยวข้องกับ TypeScript
-npm i express 
-npm i @types/express --dev
-npm i axios
-npm i @types/axios --dev
+- npm i express 
+- npm i @types/express --dev
+- npm i axios
+- npm i @types/axios --dev
 
 ## การคอมไพล์ TypeScript
 tsc server.ts
