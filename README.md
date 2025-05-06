@@ -1,4 +1,4 @@
-# TypeScript Setup Guide
+# TypeScript Setup Guide by Boonyakit
 เอกสารนี้ให้แนวทางการติดตั้งและใช้งาน TypeScript สำหรับโปรเจกต์ Node.js ของคุณ พร้อมแนะนำแพ็กเกจเสริมที่ช่วยให้พัฒนางานได้สะดวกขึ้น
 
 ## การติดตั้ง TypeScript แบบ Global
